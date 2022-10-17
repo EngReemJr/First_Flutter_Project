@@ -15,7 +15,7 @@ import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 
 void main() {
   runApp(ScreenUtilInit(
-      designSize: const Size(726, 1038),
+      designSize: const Size(412, 915),
       builder: (context, child) {
         return MaterialApp(
           home: DietApp(),
@@ -221,7 +221,7 @@ class DietApp extends StatelessWidget {
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold)),
                                     LinearPercentIndicator(
-                                      width: 120,
+                                      width: 100,
                                       percent: 0.88,
                                       backgroundColor:
                                           Color.fromARGB(255, 238, 241, 247),
@@ -243,7 +243,7 @@ class DietApp extends StatelessWidget {
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold)),
                                     LinearPercentIndicator(
-                                      width: 120,
+                                      width: 100,
                                       percent: 0.45,
                                       backgroundColor:
                                           Color.fromARGB(255, 255, 223, 234),
@@ -265,7 +265,7 @@ class DietApp extends StatelessWidget {
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold)),
                                     LinearPercentIndicator(
-                                      width: 120,
+                                      width: 100,
                                       percent: 0.2,
                                       backgroundColor:
                                           Color.fromARGB(255, 254, 250, 221),
