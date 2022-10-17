@@ -15,7 +15,7 @@ import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 
 void main() {
   runApp(ScreenUtilInit(
-      designSize: const Size(412, 915),
+      designSize: const Size(390, 844),
       builder: (context, child) {
         return MaterialApp(
           home: DietApp(),
@@ -30,14 +30,7 @@ class DietApp extends StatelessWidget {
     return Scaffold(
         appBar: Custome_appBar(
           height: 120,
-          child: Column(
-            children: [
-              Text('One'),
-              Text('Two'),
-              Text('Three'),
-              Text('Four'),
-            ],
-          ),
+          child: Column(),
         ),
         body: Stack(children: [
           SingleChildScrollView(
@@ -68,7 +61,7 @@ class DietApp extends StatelessWidget {
                   Container(
                     margin: EdgeInsets.all(20),
                     width: double.infinity,
-                    height: 370,
+                    height: 372.h,
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.only(
@@ -217,18 +210,18 @@ class DietApp extends StatelessWidget {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   // ignore: prefer_const_literals_to_create_immutables
                                   children: [
-                                    Text('Carbs',
+                                    Text('Carbs\n',
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold)),
                                     LinearPercentIndicator(
-                                      width: 100,
+                                      width: 100.h,
                                       percent: 0.88,
                                       backgroundColor:
                                           Color.fromARGB(255, 238, 241, 247),
                                       progressColor:
                                           Color.fromARGB(255, 142, 166, 203),
                                     ),
-                                    Text('12g Left',
+                                    Text('\n12g Left',
                                         style: TextStyle(
                                             color: Color.fromARGB(
                                                 255, 152, 167, 169)))
@@ -239,18 +232,18 @@ class DietApp extends StatelessWidget {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   // ignore: prefer_const_literals_to_create_immutables
                                   children: [
-                                    Text('Protein',
+                                    Text('Protein\n',
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold)),
                                     LinearPercentIndicator(
-                                      width: 100,
+                                      width: 100.h,
                                       percent: 0.45,
                                       backgroundColor:
                                           Color.fromARGB(255, 255, 223, 234),
                                       progressColor:
                                           Color.fromARGB(255, 244, 122, 163),
                                     ),
-                                    Text('30g Left',
+                                    Text('\n30g Left',
                                         style: TextStyle(
                                             color: Color.fromARGB(
                                                 255, 152, 167, 169)))
@@ -261,18 +254,18 @@ class DietApp extends StatelessWidget {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   // ignore: prefer_const_literals_to_create_immutables
                                   children: [
-                                    Text('Fat',
+                                    Text('Fat\n',
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold)),
                                     LinearPercentIndicator(
-                                      width: 100,
+                                      width: 100.h,
                                       percent: 0.2,
                                       backgroundColor:
                                           Color.fromARGB(255, 254, 250, 221),
                                       progressColor:
                                           Color.fromARGB(255, 240, 190, 84),
                                     ),
-                                    Text('10g Left',
+                                    Text('\n10g Left',
                                         style: TextStyle(
                                             color: Color.fromARGB(
                                                 255, 152, 167, 169)))

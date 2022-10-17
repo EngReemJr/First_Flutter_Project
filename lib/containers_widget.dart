@@ -10,12 +10,12 @@ class Food_Containers extends StatelessWidget {
     return SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Container(
-            width: 720,
+            width: 720.h,
             child: Row(children: [
               Stack(children: [
                 Container(
                     margin: EdgeInsets.all(20),
-                    width: 200,
+                    width: 200.h,
                     height: 309,
                     decoration: BoxDecoration(
                         color: Color.fromARGB(255, 250, 147, 139),
@@ -101,7 +101,7 @@ class Food_Containers extends StatelessWidget {
               Stack(children: [
                 Container(
                     margin: EdgeInsets.all(20),
-                    width: 200,
+                    width: 200.h,
                     height: 304,
                     decoration: BoxDecoration(
                         color: Color.fromARGB(255, 105, 117, 227),
@@ -184,7 +184,7 @@ class Food_Containers extends StatelessWidget {
               Stack(children: [
                 Container(
                     margin: EdgeInsets.all(20),
-                    width: 200,
+                    width: 200.h,
                     height: 304,
                     decoration: BoxDecoration(
                         color: Color.fromARGB(255, 254, 103, 150),
