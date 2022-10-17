@@ -47,7 +47,7 @@ class _BottomNavBarV2State extends State<BottomNavBarV2> {
                 children: [
                   IconButton(
                     icon: Icon(
-                      Icons.home,
+                      Icons.bookmark,
                       color: currentIndex == 0
                           ? Color.fromARGB(255, 8, 60, 202)
                           : Colors.grey.shade400,
@@ -59,7 +59,7 @@ class _BottomNavBarV2State extends State<BottomNavBarV2> {
                   ),
                   IconButton(
                       icon: Icon(
-                        Icons.restaurant_menu,
+                        Icons.notifications,
                         color: currentIndex == 1
                             ? Color.fromARGB(255, 8, 60, 202)
                             : Colors.grey.shade400,
@@ -72,7 +72,7 @@ class _BottomNavBarV2State extends State<BottomNavBarV2> {
                   ),
                   IconButton(
                       icon: Icon(
-                        Icons.bookmark,
+                        Icons.restaurant_menu,
                         color: currentIndex == 2
                             ? Color.fromARGB(255, 8, 60, 202)
                             : Colors.grey.shade400,
@@ -82,7 +82,7 @@ class _BottomNavBarV2State extends State<BottomNavBarV2> {
                       }),
                   IconButton(
                       icon: Icon(
-                        Icons.notifications,
+                        Icons.person,
                         color: currentIndex == 3
                             ? Color.fromARGB(255, 8, 60, 202)
                             : Colors.grey.shade400,
@@ -112,7 +112,7 @@ class BNBCustomPainter extends CustomPainter {
     path.quadraticBezierTo(size.width * 0.20, 0, size.width * 0.35, 0);
     path.quadraticBezierTo(size.width * 0.40, 0, size.width * 0.40, 20);
     path.arcToPoint(Offset(size.width * 0.60, 20),
-        radius: Radius.circular(10.0), clockwise: false);
+        radius: Radius.circular(5), clockwise: false);
     path.quadraticBezierTo(size.width * 0.60, 0, size.width * 0.65, 0);
     path.quadraticBezierTo(size.width * 0.80, 0, size.width, 20);
     path.lineTo(size.width, size.height);

@@ -11,6 +11,7 @@ class Custome_appBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: double.infinity,
       color: Color.fromARGB(255, 243, 242, 249),
       padding: EdgeInsets.all(20),
       child: Row(
@@ -20,9 +21,10 @@ class Custome_appBar extends StatelessWidget implements PreferredSizeWidget {
                   color: Colors.black,
                   fontWeight: FontWeight.bold,
                   fontSize: 22)),
+          // ignore: prefer_const_constructors
           Expanded(child: SizedBox()),
           SizedBox(
-            width: MediaQuery.of(context).size.width / 10.3,
+            //   width: MediaQuery.of(context).size.width / 10.3,
             child: Row(
               children: [
                 Icon(Icons.arrow_back_ios),

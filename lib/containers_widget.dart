@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Food_Containers extends StatelessWidget {
   Food_Containers();
@@ -13,7 +14,7 @@ class Food_Containers extends StatelessWidget {
             Container(
                 margin: EdgeInsets.all(20),
                 width: 200,
-                height: 304,
+                height: 309,
                 decoration: BoxDecoration(
                     color: Color.fromARGB(255, 250, 147, 139),
                     borderRadius: BorderRadius.only(
@@ -84,7 +85,7 @@ class Food_Containers extends StatelessWidget {
                     decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         image: DecorationImage(
-                            scale: 5,
+                            scale: 6,
                             image: NetworkImage(
                               'https://cdn-icons-png.flaticon.com/512/2504/2504981.png',
                             ))),

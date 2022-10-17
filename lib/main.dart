@@ -1,20 +1,27 @@
 // ignore_for_file: prefer_const_constructors
 
+//import 'dart:js';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:percent_indicator/circular_percent_indicator.dart';
+import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:project1/custome_appBar.dart';
 
 import 'BottomNavBar.dart';
 import 'containers_widget.dart';
 import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 
-//import 'package:calendar_appbar/calendar_appbar.dart';
-
 void main() {
-  runApp(MaterialApp(
-    home: DietApp(),
-    debugShowCheckedModeBanner: false,
-  ));
+  runApp(ScreenUtilInit(
+      designSize: const Size(726, 1038),
+      builder: (context, child) {
+        return MaterialApp(
+          home: DietApp(),
+          debugShowCheckedModeBanner: false,
+        );
+      }));
 }
 
 class DietApp extends StatelessWidget {
@@ -61,7 +68,7 @@ class DietApp extends StatelessWidget {
                   Container(
                     margin: EdgeInsets.all(20),
                     width: double.infinity,
-                    height: 355,
+                    height: 370,
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.only(
@@ -176,23 +183,6 @@ class DietApp extends StatelessWidget {
                               ],
                             ),
                             Expanded(child: SizedBox()),
-                            // SleekCircularSlider(
-                            //   min: 0,
-                            //   max: 4500,
-                            //   initialValue: 1503,
-                            //   onChange: (double value) {
-                            //     // callback providing a value while its being changed (with a pan gesture)
-                            //   },
-                            //   onChangeStart: (double startValue) {
-                            //     // callback providing a starting value (when a pan gesture starts)
-                            //   },
-                            //   onChangeEnd: (double endValue) {
-                            //     // ucallback providing an ending value (when a pan gesture ends)
-                            //   },
-                            //   /* innerWidget: (double value) {
-                            //     // use your custom widget inside the slider (gets a slider value from the callback)
-                            //   },*/
-                            // ),
                             SleekCircularSlider(
                               appearance: CircularSliderAppearance(
                                 customColors: CustomSliderColors(
@@ -207,12 +197,11 @@ class DietApp extends StatelessWidget {
                                     InfoProperties(topLabelText: 'Kcal left'),
                               ),
                               initialValue: 1503,
-                              max: 4000,
+                              max: 4500,
                               onChange: (double value) {
                                 print(value);
                               },
                             ),
-
                             SizedBox(
                               width: 20,
                             )
@@ -225,11 +214,20 @@ class DietApp extends StatelessWidget {
                             child: Row(
                               children: [
                                 Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   // ignore: prefer_const_literals_to_create_immutables
                                   children: [
                                     Text('Carbs',
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold)),
+                                    LinearPercentIndicator(
+                                      width: 120,
+                                      percent: 0.88,
+                                      backgroundColor:
+                                          Color.fromARGB(255, 238, 241, 247),
+                                      progressColor:
+                                          Color.fromARGB(255, 142, 166, 203),
+                                    ),
                                     Text('12g Left',
                                         style: TextStyle(
                                             color: Color.fromARGB(
@@ -238,11 +236,20 @@ class DietApp extends StatelessWidget {
                                 ),
                                 Expanded(child: SizedBox()),
                                 Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   // ignore: prefer_const_literals_to_create_immutables
                                   children: [
                                     Text('Protein',
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold)),
+                                    LinearPercentIndicator(
+                                      width: 120,
+                                      percent: 0.45,
+                                      backgroundColor:
+                                          Color.fromARGB(255, 255, 223, 234),
+                                      progressColor:
+                                          Color.fromARGB(255, 244, 122, 163),
+                                    ),
                                     Text('30g Left',
                                         style: TextStyle(
                                             color: Color.fromARGB(
@@ -251,11 +258,20 @@ class DietApp extends StatelessWidget {
                                 ),
                                 Expanded(child: SizedBox()),
                                 Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   // ignore: prefer_const_literals_to_create_immutables
                                   children: [
                                     Text('Fat',
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold)),
+                                    LinearPercentIndicator(
+                                      width: 120,
+                                      percent: 0.2,
+                                      backgroundColor:
+                                          Color.fromARGB(255, 254, 250, 221),
+                                      progressColor:
+                                          Color.fromARGB(255, 240, 190, 84),
+                                    ),
                                     Text('10g Left',
                                         style: TextStyle(
                                             color: Color.fromARGB(
@@ -296,17 +312,6 @@ class DietApp extends StatelessWidget {
                     ),
                   ),
                   Food_Containers(),
-                  // ignore: prefer_const_literals_to_create_immutables
-                  // BottomNavigationBar(selectedItemColor: Colors.blue, items: [
-                  //   BottomNavigationBarItem(
-                  //       icon: Icon(Icons.home), label: 'Book'),
-                  //   BottomNavigationBarItem(
-                  //       icon: Icon(Icons.favorite), label: 'Run'),
-                  //   BottomNavigationBarItem(
-                  //       icon: Icon(Icons.favorite), label: 'Food'),
-                  //   BottomNavigationBarItem(
-                  //       icon: Icon(Icons.favorite), label: 'Profile')
-                  // ])
                   SizedBox(
                     height: 100,
                   )
