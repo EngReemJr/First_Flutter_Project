@@ -29,7 +29,7 @@ class DietApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: Custome_appBar(
-          height: 120,
+          height: 120.h,
           child: Column(),
         ),
         body: Stack(children: [
@@ -306,7 +306,7 @@ class DietApp extends StatelessWidget {
                   ),
                   Food_Containers(),
                   SizedBox(
-                    height: 100,
+                    height: 100.h,
                   )
                 ])),
           ),

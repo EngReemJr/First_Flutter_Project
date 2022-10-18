@@ -88,12 +88,12 @@ class Food_Containers extends StatelessWidget {
                         decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             image: DecorationImage(
-                                scale: 6,
-                                image: NetworkImage(
-                                  'https://cdn-icons-png.flaticon.com/512/2504/2504981.png',
+                                scale: 1,
+                                image: AssetImage(
+                                  'images/Breakfast.png',
                                 ))),
                       )),
-                  left: 50.0,
+                  left: 30.0,
                   top: -9.0,
                 )
               ]),
@@ -171,12 +171,12 @@ class Food_Containers extends StatelessWidget {
                     decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         image: DecorationImage(
-                            scale: 6,
-                            image: NetworkImage(
-                              'https://cdn-icons-png.flaticon.com/512/2515/2515183.png',
+                            scale: 1,
+                            image: AssetImage(
+                              'images/lunch.png',
                             ))),
                   ),
-                  left: 50.0,
+                  left: 30.0,
                   top: -18.0,
                 )
               ]),
@@ -251,12 +251,12 @@ class Food_Containers extends StatelessWidget {
                       decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           image: DecorationImage(
-                              scale: 6,
-                              image: NetworkImage(
-                                'https://cdn-icons-png.flaticon.com/512/4799/4799644.png',
+                              scale: 1,
+                              image: AssetImage(
+                                'images/Snack.png',
                               ))),
                     ),
-                    left: 50.0,
+                    left: 30.0,
                     top: -15.0)
               ])
             ])));
