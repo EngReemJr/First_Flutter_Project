@@ -13,11 +13,14 @@ import 'BottomNavBar.dart';
 import 'containers_widget.dart';
 import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 
+import 'newmeal.dart';
+
 void main() {
   runApp(ScreenUtilInit(
-      designSize: const Size(390, 844),
+      designSize: const Size(360, 640),
       builder: (context, child) {
         return MaterialApp(
+          routes: {'newmeal': (context) => NewMeal()},
           home: DietApp(),
           debugShowCheckedModeBanner: false,
         );
@@ -29,12 +32,13 @@ class DietApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: Custome_appBar(
-          height: 120.h,
+          height: 110.h,
           child: Column(),
         ),
         body: Stack(children: [
           SingleChildScrollView(
             child: Container(
+                width: MediaQuery.of(context).size.width,
                 decoration:
                     BoxDecoration(color: Color.fromARGB(255, 243, 242, 249)),
                 child: Column(children: [
@@ -60,8 +64,8 @@ class DietApp extends StatelessWidget {
                   ),
                   Container(
                     margin: EdgeInsets.all(20),
-                    width: double.infinity,
-                    height: 372.h,
+                    width: MediaQuery.of(context).size.width - 10.w,
+                    height: 285.h,
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.only(
@@ -84,51 +88,57 @@ class DietApp extends StatelessWidget {
                             Column(
                               children: [
                                 Container(
-                                  margin: EdgeInsets.all(30),
-                                  padding: EdgeInsets.all(10),
-                                  // ignore: prefer_const_constructors
-                                  decoration: BoxDecoration(
-                                      border: const Border(
-                                          left: BorderSide(
-                                    //                   <--- left side
-                                    color: Color.fromARGB(255, 200, 206, 241),
-                                    width: 3.0,
-                                  ))),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text('Eaten\n',
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                              color: Colors.grey)),
-                                      Row(
-                                        // ignore: prefer_const_literals_to_create_immutables
+                                    margin: EdgeInsets.all(20),
+                                    // padding: EdgeInsets.all(5),
+                                    // width: 240.w,
+
+                                    // ignore: prefer_const_constructors
+                                    decoration: BoxDecoration(
+                                        border: const Border(
+                                            left: BorderSide(
+                                      //                   <--- left side
+                                      color: Color.fromARGB(255, 200, 206, 241),
+                                      width: 3.0,
+                                    ))),
+                                    child: Container(
+                                      //  padding: EdgeInsets.all(9),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: [
-                                          ImageIcon(
-                                            NetworkImage(
-                                                "https://cdn-icons-png.flaticon.com/512/3534/3534848.png"),
-                                            color:
-                                                Color.fromARGB(246, 3, 96, 245),
-                                            size: 18,
-                                          ),
-                                          Text('1127  ',
+                                          Text('  Eaten\n',
                                               style: TextStyle(
-                                                  fontWeight: FontWeight.bold)),
-                                          Text(
-                                            'Kcal',
-                                            style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.grey)),
+                                          Row(
+                                            // ignore: prefer_const_literals_to_create_immutables
+                                            children: [
+                                              Text('  '),
+                                              ImageIcon(
+                                                NetworkImage(
+                                                    "https://cdn-icons-png.flaticon.com/512/3534/3534848.png"),
                                                 color: Color.fromARGB(
-                                                    255, 158, 166, 172)),
+                                                    246, 3, 96, 245),
+                                                size: 18,
+                                              ),
+                                              Text('1127  ',
+                                                  style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.bold)),
+                                              Text(
+                                                'Kcal',
+                                                style: TextStyle(
+                                                    color: Color.fromARGB(
+                                                        255, 158, 166, 172)),
+                                              )
+                                            ],
                                           )
                                         ],
-                                      )
-                                    ],
-                                  ),
-                                ),
+                                      ),
+                                    )),
                                 Container(
-                                    margin: EdgeInsets.all(20),
-                                    padding: EdgeInsets.all(15),
+                                    //  margin: EdgeInsets.all(10),
+                                    //  padding: EdgeInsets.all(5),
 
                                     // ignore: prefer_const_constructors
                                     decoration: BoxDecoration(
@@ -141,17 +151,20 @@ class DietApp extends StatelessWidget {
                                       width: 3.0,
                                     ))),
                                     // ignore: prefer_const_constructors
-                                    child: Column(
+                                    child: Container(
+                                        //: EdgeInsets.all(11),
+                                        child: Column(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        Text('Burned\n',
+                                        Text('   Burned\n',
                                             style: TextStyle(
                                                 fontWeight: FontWeight.bold,
                                                 color: Colors.grey)),
                                         Row(
                                           // ignore: prefer_const_literals_to_create_immutables
                                           children: [
+                                            Text('   '),
                                             ImageIcon(
                                               NetworkImage(
                                                   "https://cdn-icons-png.flaticon.com/512/3525/3525283.png"),
@@ -172,7 +185,7 @@ class DietApp extends StatelessWidget {
                                           ],
                                         )
                                       ],
-                                    ))
+                                    )))
                               ],
                             ),
                             Expanded(child: SizedBox()),
@@ -214,7 +227,7 @@ class DietApp extends StatelessWidget {
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold)),
                                     LinearPercentIndicator(
-                                      width: 100.h,
+                                      width: 90.w,
                                       percent: 0.88,
                                       backgroundColor:
                                           Color.fromARGB(255, 238, 241, 247),
@@ -236,7 +249,7 @@ class DietApp extends StatelessWidget {
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold)),
                                     LinearPercentIndicator(
-                                      width: 100.h,
+                                      width: 90.w,
                                       percent: 0.45,
                                       backgroundColor:
                                           Color.fromARGB(255, 255, 223, 234),
@@ -258,7 +271,7 @@ class DietApp extends StatelessWidget {
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold)),
                                     LinearPercentIndicator(
-                                      width: 100.h,
+                                      width: 90.w,
                                       percent: 0.2,
                                       backgroundColor:
                                           Color.fromARGB(255, 254, 250, 221),
@@ -285,7 +298,7 @@ class DietApp extends StatelessWidget {
                   ),
                   Container(
                     width: double.infinity,
-                    margin: EdgeInsets.all(20),
+                    margin: EdgeInsets.all(15),
                     child: Row(
                       // ignore: prefer_const_literals_to_create_immutables
                       children: [

@@ -13,7 +13,7 @@ class Custome_appBar extends StatelessWidget implements PreferredSizeWidget {
     return Container(
       width: double.infinity,
       color: Color.fromARGB(255, 243, 242, 249),
-      padding: EdgeInsets.all(20),
+      // padding: EdgeInsets.all(20),
       child: Row(
         children: [
           Text('My Diary',

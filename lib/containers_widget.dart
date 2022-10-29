@@ -1,7 +1,13 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'dart:js';
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:project1/listViewItem.dart';
+
+import 'newmeal.dart';
 
 class Food_Containers extends StatelessWidget {
   Food_Containers();
@@ -10,20 +16,21 @@ class Food_Containers extends StatelessWidget {
     return SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Container(
-            width: 720.h,
+            padding: EdgeInsets.all(14),
+            width: MediaQuery.of(context).size.width,
             child: Row(children: [
               Stack(children: [
                 Container(
-                    margin: EdgeInsets.all(20),
-                    width: 200.h,
-                    height: 309,
+                    margin: EdgeInsets.all(10),
+                    width: 90.w,
+                    height: 171.h,
                     decoration: BoxDecoration(
                         color: Color.fromARGB(255, 250, 147, 139),
                         borderRadius: BorderRadius.only(
-                            topRight: Radius.circular(75),
-                            topLeft: Radius.circular(10),
-                            bottomLeft: Radius.circular(10),
-                            bottomRight: Radius.circular(10)),
+                            topRight: Radius.circular(50),
+                            topLeft: Radius.circular(5),
+                            bottomLeft: Radius.circular(5),
+                            bottomRight: Radius.circular(5)),
                         // ignore: prefer_const_literals_to_create_immutables
                         boxShadow: [
                           BoxShadow(
@@ -34,25 +41,25 @@ class Food_Containers extends StatelessWidget {
                           )
                         ]),
                     child: Container(
-                      margin: EdgeInsets.all(24),
+                      margin: EdgeInsets.all(16),
                       child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           // ignore: prefer_const_literals_to_create_immutables
                           children: [
-                            SizedBox(height: 70),
+                            SizedBox(height: 19),
                             Text(
                               'Breakfast',
                               style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 28),
+                                  fontSize: 13),
                             ),
                             Text(
                               '\nBread,\nPeanut Butter,\nApple',
                               style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 16),
+                                  fontSize: 9),
                             ),
                             Row(
                               // ignore: prefer_const_literals_to_create_immutables
@@ -62,14 +69,14 @@ class Food_Containers extends StatelessWidget {
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 24),
+                                      fontSize: 14),
                                 ),
                                 Text(
-                                  '\n\n  Kcal',
+                                  '\n  Kcal',
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 16),
+                                      fontSize: 12),
                                 )
                               ],
                             )
@@ -88,28 +95,28 @@ class Food_Containers extends StatelessWidget {
                         decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             image: DecorationImage(
-                                scale: 1,
+                                scale: 4,
                                 image: AssetImage(
                                   'images/Breakfast.png',
                                 ))),
                       )),
-                  left: 30.0,
-                  top: -9.0,
+                  left: -15.0,
+                  top: -40.0,
                 )
               ]),
               //  Expanded(child: SizedBox()),
               Stack(children: [
                 Container(
-                    margin: EdgeInsets.all(20),
-                    width: 200.h,
-                    height: 304,
+                    margin: EdgeInsets.all(10),
+                    width: 90.w,
+                    height: 169.h,
                     decoration: BoxDecoration(
                         color: Color.fromARGB(255, 105, 117, 227),
                         borderRadius: BorderRadius.only(
-                            topRight: Radius.circular(75),
-                            topLeft: Radius.circular(10),
-                            bottomLeft: Radius.circular(10),
-                            bottomRight: Radius.circular(10)),
+                            topRight: Radius.circular(50),
+                            topLeft: Radius.circular(5),
+                            bottomLeft: Radius.circular(5),
+                            bottomRight: Radius.circular(5)),
                         // ignore: prefer_const_literals_to_create_immutables
                         boxShadow: [
                           BoxShadow(
@@ -120,42 +127,42 @@ class Food_Containers extends StatelessWidget {
                           )
                         ]),
                     child: Container(
-                      margin: EdgeInsets.all(24),
+                      margin: EdgeInsets.all(16),
                       child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           // ignore: prefer_const_literals_to_create_immutables
                           children: [
-                            SizedBox(height: 70),
+                            SizedBox(height: 13),
                             Text(
                               'Lunch',
                               style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 28),
+                                  fontSize: 13),
                             ),
                             Text(
-                              '\nSalmon,\nMixed veggies,\nAvocado',
+                              '\nSalmon,\nMixed veggies,\nAvocado\n',
                               style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 16),
+                                  fontSize: 9),
                             ),
                             Row(
                               // ignore: prefer_const_literals_to_create_immutables
                               children: [
                                 Text(
-                                  '\n602',
+                                  '602',
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 24),
+                                      fontSize: 12),
                                 ),
                                 Text(
-                                  '\n\n  Kcal',
+                                  '  Kcal',
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 16),
+                                      fontSize: 5),
                                 )
                               ],
                             )
@@ -171,25 +178,25 @@ class Food_Containers extends StatelessWidget {
                     decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         image: DecorationImage(
-                            scale: 1,
+                            scale: 4,
                             image: AssetImage(
                               'images/lunch.png',
                             ))),
                   ),
-                  left: 30.0,
-                  top: -18.0,
+                  left: -15.0,
+                  top: -40.0,
                 )
               ]),
               //  Expanded(child: SizedBox()),
               Stack(children: [
                 Container(
-                    margin: EdgeInsets.all(20),
-                    width: 200.h,
-                    height: 304,
+                    margin: EdgeInsets.all(10),
+                    width: 90.w,
+                    height: 169.h,
                     decoration: BoxDecoration(
                         color: Color.fromARGB(255, 254, 103, 150),
                         borderRadius: BorderRadius.only(
-                            topRight: Radius.circular(75),
+                            topRight: Radius.circular(50),
                             topLeft: Radius.circular(10),
                             bottomLeft: Radius.circular(10),
                             bottomRight: Radius.circular(10)),
@@ -203,42 +210,47 @@ class Food_Containers extends StatelessWidget {
                           )
                         ]),
                     child: Container(
-                      margin: EdgeInsets.all(24),
+                      margin: EdgeInsets.all(16),
                       child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           // ignore: prefer_const_literals_to_create_immutables
                           children: [
-                            SizedBox(height: 70),
+                            SizedBox(height: 15),
                             Text(
                               'Snack',
                               style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 28),
+                                  fontSize: 12),
                             ),
                             Text(
-                              '\nRecommand:\n800 Kcal\n\n',
+                              '\nRecommand:\n800 Kcal\n',
                               style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 16),
+                                  fontSize: 9),
                             ),
                             Row(
                                 // ignore: prefer_const_literals_to_create_immutables
                                 children: [
                                   Container(
-                                      width: 40,
-                                      height: 40,
+                                      width: 30.w,
+                                      height: 30.h,
                                       decoration: BoxDecoration(
                                           color: Colors.white,
                                           shape: BoxShape.circle),
-                                      child: IconButton(
-                                          onPressed: defaultMethod,
-                                          icon: Icon(
-                                            Icons.add,
-                                            color: Color.fromARGB(
-                                                255, 254, 103, 150),
-                                          )))
+                                      child: Center(
+                                          child: IconButton(
+                                              onPressed: () {
+                                                Navigator.of(context).pushNamed(
+                                                    'newmeal',
+                                                    arguments: 'Hello Reem');
+                                              },
+                                              icon: Icon(
+                                                Icons.add,
+                                                color: Color.fromARGB(
+                                                    255, 254, 103, 150),
+                                              ))))
                                 ]),
                             //  IconButton(onPressed: {return 0 ;}, icon: Icons.plus)
                           ]),
@@ -251,13 +263,13 @@ class Food_Containers extends StatelessWidget {
                       decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           image: DecorationImage(
-                              scale: 1,
+                              scale: 4,
                               image: AssetImage(
                                 'images/Snack.png',
                               ))),
                     ),
-                    left: 30.0,
-                    top: -15.0)
+                    left: -20.0,
+                    top: -40.0)
               ])
             ])));
   }
